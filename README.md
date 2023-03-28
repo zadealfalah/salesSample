@@ -30,6 +30,7 @@ This project seeks to answer a few business questions on sales data and to visua
 
 ## Possible To Do's
 - Clean up tableau vis.  It looks nice in tableu itself but things are off-centered in the public view.
+- Automate future data to tableau
 - - Find larger sales dataset, preferably one with dirtier data 
   - Assuming a larger dataset is found, do ETL with SQL
 
