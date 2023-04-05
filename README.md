@@ -32,6 +32,7 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 - How do our sales trends look?
 - Where do we sell the most?
 - Where is most profitable to sell?
+- Which products are sold together the most?
 
 [data]()
 - [loadData.sql]() has the SQL code to create the table in MySQL.  
