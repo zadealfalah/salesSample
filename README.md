@@ -38,6 +38,9 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 - [loadData.sql]() has the SQL code to create the table in MySQL.  
 
 ## Possible To Do
+- Update onlineRetail to allow reading from MySQL
+- Add some more business questions e.g. customer retention?
+- Update powerpoint presentation
 - Write SQL for updating database if new data were to be introduced - .sql or via python connector?
 - In onlineRetail.ipynb, change invoice to strip 'c' for cancelled orders, add as a flag, convert dtype to int.
 
