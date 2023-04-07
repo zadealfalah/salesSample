@@ -1,7 +1,7 @@
 # salesSample - Python, SQL, Tableau
 Showcasing sales analysis and Tableau visualization
 
-![img](https://github.com/zadealfalah/salesSample/blob/main/data/salesDashboard.png)
+![img](https://github.com/zadealfalah/salesSample/blob/main/kaggleSalesData/data/salesDashboard.png)
 
 ## Table of Contents
 * [General Info](#general-info)
