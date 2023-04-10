@@ -38,11 +38,16 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 - [loadData.sql]() has the SQL code to create the table in MySQL.  
 
 ## Possible To Do
-- Update onlineRetail to allow reading from MySQL
+- Add LSTM comparison for forecasting
+- Forecast into future with best XGBoost model
+- Examine feature importance with XGBoost model
+- Writeup findings with models once LSTM and XGBoost are completed
+- Find items bought together
+- Clean up onlineRetail notebook!
+- Add Tableau for onlineRetail once analysis is done, remove kaggleSales when done
 - Add some more business questions e.g. customer retention?
 - Update powerpoint presentation
 - Write SQL for updating database if new data were to be introduced - .sql or via python connector?
-- In onlineRetail.ipynb, change invoice to strip 'c' for cancelled orders, add as a flag, convert dtype to int.
 
 ## Data Citation
 https://www.kaggle.com/datasets/kyanyoga/sample-sales-data?select=sales_data_sample.csv
