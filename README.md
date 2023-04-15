@@ -39,15 +39,13 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 
 ## Possible To Do
 - Add LSTM comparison for forecasting
-- Forecast into future with best XGBoost model
-- Examine feature importance with XGBoost model
 - Writeup findings with models once LSTM and XGBoost are completed
-- Find items bought together
-- Clean up onlineRetail notebook!
+- Finish items bought together analysis, writeup findings of items bought together
 - Add Tableau for onlineRetail once analysis is done, remove kaggleSales when done
-- Add some more business questions e.g. customer retention?
 - Update powerpoint presentation
-- Write SQL for updating database if new data were to be introduced - .sql or via python connector?
+- Write SQL for updating database if new data were to be introduced - .sql or via python connector
+- Think of additional business questions to add
+- Update readme with final version
 
 ## Data Citation
 https://www.kaggle.com/datasets/kyanyoga/sample-sales-data?select=sales_data_sample.csv
