@@ -39,6 +39,7 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 
 ## Possible To Do
 - Add LSTM comparison for forecasting
+- Add basic linreg for comparison in modeling
 - Writeup findings with models once LSTM and XGBoost are completed
 - Finish items bought together analysis, writeup findings of items bought together
 - Add Tableau for onlineRetail once analysis is done, remove kaggleSales when done
