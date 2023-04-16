@@ -17,7 +17,7 @@ The Tableau visualization can be found [here](https://public.tableau.com/app/pro
 
 
 ## kaggleSalesData Tableau
-[salesSample.ipynb](https://github.com/zadealfalah/salesSample/blob/main/salesSample.ipynb) shows the reading in and basic EDA of our smaller, cleaner data.  The data was saved to csv for future use.  This cleaned csv was also put in to a MySQL server which Tableau uses to automatically update the visualizations. The methodology for automatically updating Tableau dashboards is demonstrated in another one of my [projects](https://github.com/zadealfalah/pySheetsReddit)
+salesSample.ipynb shows the reading in and basic EDA of our smaller, cleaner data.  The data was saved to csv for future use.  This cleaned csv was also put in to a MySQL server which Tableau uses to automatically update the visualizations. The methodology for automatically updating Tableau dashboards is demonstrated in another one of my [projects](https://github.com/zadealfalah/pySheetsReddit)
 
 data
  - getData.sql has the SQL code to create the table in MySQL.  The table is created to conform to the original data.  
