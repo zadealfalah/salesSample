@@ -45,13 +45,10 @@ data
 
 ## Possible To Do
 - Add LSTM comparison for forecasting
-- Add basic linreg for comparison in modeling
 - Writeup findings with models once LSTM and XGBoost are completed
-- Finish items bought together analysis, writeup findings of items bought together
 - Add Tableau for onlineRetail once analysis is done, remove kaggleSales when done
 - Update powerpoint presentation
 - Write SQL for updating database if new data were to be introduced - .sql or via python connector
-- Think of additional business questions to add
 - Update readme with final version
 
 ## Data Citation
