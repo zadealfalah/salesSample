@@ -11,9 +11,9 @@ Showcasing sales analysis and Tableau visualization
 * [Data Citation](#data-citation)
 
 ## General Info
-This project is broken up into two parts - kaggleSalesData and onlineRetail.  This was done because it was difficult to find a large sales dataset with messy data.  Originally, there was only the smaller, cleaner dataset from Kaggle which was used to showcase some Tableau.  Now, kaggleSalesData is used to display some visualizations in Tableau and onlineRetail is used to display some analysis with Python / MySQL.  Once the analysis is completed, I kaggleSalesData will be removed and the Tableau will be replaced with onlineRetail as well.
+This project is broken up into two parts - kaggleSalesData and onlineRetail.  The former of which is used as an example of a sales Tableau dashboard while the analysis of the latter is completed.  It will be replaced once analysis is completed on onlineRetail and the new dashboard is created.
 
-The Tableau visualization can be found [here](https://public.tableau.com/app/profile/zade.alfalah/viz/salesDashboard_16805458941440/Dashboard1)
+The placeholder Tableau visualization can be found [here](https://public.tableau.com/app/profile/zade.alfalah/viz/salesDashboard_16805458941440/Dashboard1)
 
 
 ## kaggleSalesData Tableau
@@ -25,7 +25,16 @@ data
  - salesSampleCleaned.csv is the csv output from salesSample.ipynb
  
 ## onlineRetail Analysis
-retail.ipynb shows the reading in, EDA, and data analysis for our larger, messier dataset.  The data is download from the UCI ML [Repository](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II#), turned into CSV files and read in to Python via Pandas.  The data is then examined for missing or junk data before being saved as both a CSV and put into a MySQL database.  Analysis is done to answer some possible business questions e.g.
+[data](https://github.com/zadealfalah/salesSample/tree/main/onlineRetail/data)
+- loadData.sql has the SQL code to create the table in MySQL.  
+- imgs has plots output from our analysis notebook, used in our ppt presentation
+
+[onlineRetail.pdf](https://github.com/zadealfalah/salesSample/blob/main/onlineRetail/onlineRetail.pdf)
+Powerpoint presentation of our analysis saved as a pdf
+
+[retail.ipynb](https://github.com/zadealfalah/salesSample/blob/main/onlineRetail/retail.ipynb) 
+The reading in, EDA, and data analysis for our full dataset.  The data is downloaded from the [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II#), turned into CSV files and read in to Python via Pandas.  The data is then examined for missing or junk data before being saved as both a CSV and put into a MySQL database.  Analysis is done to answer some possible business questions.  Unfortunately, there is no COGS data for our items so all questions about profitability are based solely on revenue and we can not accurately analyze the total profit.
+
 - What are our most commonly ordered items?
 - What is our total revenue?
 - When did we sell the most?
@@ -36,20 +45,17 @@ retail.ipynb shows the reading in, EDA, and data analysis for our larger, messie
 - How does our customer retention look?
 - What items are frequently bought together?
 
-Following this, some modeling and forecasting are done using Prophet and XGBoost.
+Following this, modeling and forecasting are done using Prophet, XGBoost, and sklearn.  
 
-data
-- loadData.sql has the SQL code to create the table in MySQL.  
-- onlneRetail.pdf has an example of a powerpoint presentation of our analysis (WIP)
-- imgs has plots output from our analysis
+With our revenue data being relatively flat, our models are quite bad and essentially predict a horizontal line with some noise and do not capture the rare spikes of revenue.  Prophet captures some of the variability in the time of day and sees the dirth of sales during the weekend.  XGBoost also finds the lack of weekend sales while also capturing some seasonality and using 1, 10, and 100 day lag features.  Finally sklearn is used to create a linear regression - despite the fact that our data clearly breaks the requisite assumptions - just to have a baseline model to compare our results to. We could have also included a horizontal line at the mean revenue. We find that our best models by RMSE are: XGBoost Regressor with TimeSeriesSplit, XGBoost Regressor with HYPEROPT, Prophet, and sklearn's Linear Regression with RMSE values of around 945, 2257, 2362, and 70619 respectively.  
+
+Clearly our TimeSeriesSplit XGBRegressor is our best model of the ones we've tested thus far.
 
 ## Possible To Do
-- Add LSTM comparison for forecasting
-- Writeup findings with models once LSTM and XGBoost are completed
+- Add LSTM comparison for forecasting, add to readme
 - Add Tableau for onlineRetail once analysis is done, remove kaggleSales when done
-- Update powerpoint presentation
 - Write SQL for updating database if new data were to be introduced - .sql or via python connector
-- Update readme with final version
+- Add seasonality to Prophet model
 
 ## Data Citation
 https://www.kaggle.com/datasets/kyanyoga/sample-sales-data?select=sales_data_sample.csv
