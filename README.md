@@ -33,7 +33,7 @@ data
 Powerpoint presentation of our analysis saved as a pdf
 
 [retail.ipynb](https://github.com/zadealfalah/salesSample/blob/main/onlineRetail/retail.ipynb) 
-The reading in, EDA, and data analysis for our full dataset.  The data is downloaded from the [UCI ML Repository](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II#), turned into CSV files and read in to Python via Pandas.  The data is then examined for missing or junk data before being saved as both a CSV and put into a MySQL database.  Analysis is done to answer some possible business questions.  Unfortunately, there is no COGS data for our items so all questions about profitability are based solely on revenue and we can not accurately analyze the total profit.
+The reading in, EDA, and data analysis for our full dataset.  The [data](https://archive.ics.uci.edu/ml/datasets/Online+Retail+II#) is downloaded from the UCI ML Repository, turned into CSV files and read in to Python via Pandas.  The data is then examined for missing or junk data before being saved as both a CSV and put into a MySQL database.  Analysis is done to answer some possible business questions.  Unfortunately, there is no COGS data for our items so all questions about profitability are based solely on revenue and we can not accurately analyze the total profit.
 
 - What are our most commonly ordered items?
 - What is our total revenue?
